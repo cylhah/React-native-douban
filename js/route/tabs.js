@@ -23,40 +23,40 @@ export default createBottomTabNavigator(
     navigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, tintColor }) => {
         const { routeName } = navigation.state;
-        let iconColor = focused? tintColor : 'grey';
-        let textStyles = focused? { color: tintColor } : {};
+        let iconColor = focused? tintColor : 'rgb(160,160,160)';
+        let textStyles = focused? { color: tintColor } : { color: 'rgb(160,160,160)'};
         if ( routeName === 'Home') {
           return (
-            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-              <Entypo name='Home' color={iconColor} />
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',paddingTop: 7}}>
+              <Entypo name='home' color={iconColor} size={25}/>
               <Text style={[textStyles, { fontSize: 12}]}>首页</Text>
             </View>
           )
         } else if ( routeName === 'BMM') {
           return (
-            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-              <MaterialCommunityIcons name='book-multiple' color={iconColor} />
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',paddingTop: 7}}>
+              <MaterialCommunityIcons name='book-multiple' color={iconColor} size={25}/>
               <Text style={[textStyles, { fontSize: 12}]}>书影音</Text>
             </View>
           )
         } else if ( routeName === 'Team') {
           return (
-            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-              <Feather name='calendar' color={iconColor} />
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',paddingTop: 7}}>
+              <Feather name='calendar' color={iconColor} size={25}/>
               <Text style={[textStyles, { fontSize: 12}]}>小组</Text>
             </View>
           )
         } else if ( routeName === 'Buy') {
           return (
-            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-              <Entypo name='calendar' color={iconColor} />
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',paddingTop: 7}}>
+              <Entypo name='calendar' color={iconColor} size={25}/>
               <Text style={[textStyles, { fontSize: 12}]}>市集</Text>
             </View>
           )
         } else if ( routeName === 'My') {
           return (
-            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-              <SimpleLineIcons name='user' color={iconColor} />
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',paddingTop: 7}}>
+              <SimpleLineIcons name='user' color={iconColor} size={25}/>
               <Text style={[textStyles, { fontSize: 12}]}>我的</Text>
             </View>
           )
@@ -66,7 +66,7 @@ export default createBottomTabNavigator(
     tabBarPosition: 'bottom',
     swipeEnabled: false,
     tabBarOptions: {
-      activeTintColor: 'rgb(7,188,252)',
+      activeTintColor: 'rgb(65,188,85)',
       showLabel: false,
     }
   }

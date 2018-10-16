@@ -1,14 +1,20 @@
-import React, { PureComponent } from 'react'
-import { View, Text } from 'react-native'
+import React, { Component } from 'react';
+import ScrollableTabView from 'react-native-scrollable-tab-view';
+import MyTab from './component/myTabBar';
+import Recommend from './recommend';
+import Message from './message';
 
-class Home extends PureComponent {
+class Home extends Component {
   render() {
     return (
-      <View>
-        <Text>Home</Text>
-      </View>
-    )
+      <ScrollableTabView
+        renderTabBar={() => <MyTab  navigation={this.props.navigation}/>}
+      >
+        <Message tabLabel="Message"></Message>
+        <Recommend tabLabel="Recommend"></Recommend>
+      </ScrollableTabView>
+    );
   }
 }
 
-export default Home
+export default Home;
